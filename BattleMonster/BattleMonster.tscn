@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bi6nyvqh4bd1j"]
+
+[ext_resource type="Script" path="res://BattleMonster/BattleMonster.gd" id="1_fgf7p"]
+[ext_resource type="Texture2D" uid="uid://dvkxh020mfqql" path="res://icon.svg" id="1_n0xiw"]
+[ext_resource type="PackedScene" uid="uid://by26v73m8rhgc" path="res://BattleMonster/Body/AttackRange/AttackRange.tscn" id="2_bxf01"]
+[ext_resource type="PackedScene" uid="uid://r847jm2cxm4k" path="res://BattleMonster/Body/StatusBars/StatusBars.tscn" id="4_reovo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6fd5"]
+resource_local_to_scene = true
+size = Vector2(128, 128)
+
+[node name="BattleMonster" type="CharacterBody2D"]
+script = ExtResource("1_fgf7p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_k6fd5")
+
+[node name="AttackRange" parent="." instance=ExtResource("2_bxf01")]
+position = Vector2(64, 64)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_n0xiw")
+
+[node name="StatusBars" parent="." instance=ExtResource("4_reovo")]
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://r847jm2cxm4k"]
+
+[ext_resource type="Script" path="res://BattleMonster/Body/StatusBars/StatusBars.gd" id="1_j4a0t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ywmk"]
+bg_color = Color(0, 0.337255, 0.509804, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8cur"]
+bg_color = Color(0, 0.639216, 0.94902, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vjwg"]
+bg_color = Color(0.388235, 0.305882, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0si6w"]
+bg_color = Color(0.878431, 0.737255, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdg4d"]
+bg_color = Color(0.423529, 0.0784314, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3f7n"]
+bg_color = Color(1, 0.345098, 0.301961, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[node name="StatusBars" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4a0t")
+
+[node name="Mana" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_top = -5.0
+offset_right = 128.0
+offset_bottom = -1.0
+theme_override_styles/background = SubResource("StyleBoxFlat_1ywmk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_r8cur")
+show_percentage = false
+
+[node name="Stamina" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_top = -11.0
+offset_right = 128.0
+offset_bottom = -7.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7vjwg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0si6w")
+show_percentage = false
+
+[node name="Health" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 128.0
+offset_bottom = -13.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sdg4d")
+theme_override_styles/fill = SubResource("StyleBoxFlat_d3f7n")
+show_percentage = false

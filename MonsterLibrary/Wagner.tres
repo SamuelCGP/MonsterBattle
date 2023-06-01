@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MonsterResource" load_steps=4 format=3 uid="uid://cs81h08ah1t0b"]
+
+[ext_resource type="Resource" path="res://BattleMonster/Brain/InstinctLibrary/AttackNearest.tres" id="1_16rl3"]
+[ext_resource type="Script" path="res://MonsterLibrary/MonsterResource.gd" id="1_qyl6t"]
+[ext_resource type="Texture2D" uid="uid://ball6s65gd0ot" path="res://wagner.png" id="2_x3ebf"]
+
+[resource]
+script = ExtResource("1_qyl6t")
+texture = ExtResource("2_x3ebf")
+instinct = ExtResource("1_16rl3")
+name = "Wagner"
+health = 100
+health_regen = 1
+stamina = 100
+stamina_regen = 5
+mana = 100
+mana_regen = 0
+attack_range = 1
+speed = 50
+damage = 10
+attack_delay = 1
+attack_stamina_cost = 10
+is_ally = false
+itens = Array[Resource("res://ItemLibrary/ItemResource.gd")]([])

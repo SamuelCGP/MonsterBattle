@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3eipfhuqk3tw"]
+
+[ext_resource type="Script" path="res://GlobalTimer.gd" id="1_3mukt"]
+
+[node name="GlobalTimer" type="Timer"]
+script = ExtResource("1_3mukt")

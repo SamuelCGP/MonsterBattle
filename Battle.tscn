@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvh81lmfesry"]
+
+[ext_resource type="PackedScene" uid="uid://bi6nyvqh4bd1j" path="res://BattleMonster/BattleMonster.tscn" id="1_dh62c"]
+[ext_resource type="PackedScene" uid="uid://d3eipfhuqk3tw" path="res://GlobalTimer.tscn" id="1_p8wiu"]
+[ext_resource type="Resource" uid="uid://bwtdj033x5v15" path="res://MonsterLibrary/Pear.tres" id="2_g4e3s"]
+[ext_resource type="Resource" uid="uid://cs81h08ah1t0b" path="res://MonsterLibrary/Wagner.tres" id="3_7j22g"]
+[ext_resource type="Resource" uid="uid://cc7g8wp3prtau" path="res://MonsterLibrary/Roberto.tres" id="5_u4234"]
+
+[sub_resource type="Gradient" id="Gradient_ipiln"]
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 0.266667)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_elfyp"]
+gradient = SubResource("Gradient_ipiln")
+width = 1280
+height = 720
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[node name="Battle" type="Node2D"]
+
+[node name="Gradient" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Gradient"]
+offset_right = 1237.0
+offset_bottom = 723.0
+texture = SubResource("GradientTexture2D_elfyp")
+
+[node name="GlobalTimer" parent="." instance=ExtResource("1_p8wiu")]
+
+[node name="BattleMonster" parent="." instance=ExtResource("1_dh62c")]
+position = Vector2(66, 122)
+monster_resource = ExtResource("2_g4e3s")
+
+[node name="BattleMonster2" parent="." instance=ExtResource("1_dh62c")]
+position = Vector2(718, 189)
+monster_resource = ExtResource("3_7j22g")
+
+[node name="BattleMonster3" parent="." instance=ExtResource("1_dh62c")]
+position = Vector2(1066, 549)
+monster_resource = ExtResource("3_7j22g")
+
+[node name="BattleMonster4" parent="." instance=ExtResource("1_dh62c")]
+position = Vector2(1077, 224)
+monster_resource = ExtResource("5_u4234")

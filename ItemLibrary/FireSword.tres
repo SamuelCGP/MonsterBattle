@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://jf5lksh754ow"]
+
+[ext_resource type="Resource" uid="uid://cc6x550q41w06" path="res://ItemLibrary/EffectLibrary/FireSwordEffect.tres" id="1_5o7qj"]
+[ext_resource type="Script" path="res://ItemLibrary/ItemResource.gd" id="1_gtdxb"]
+
+[resource]
+script = ExtResource("1_gtdxb")
+name = ""
+effect = ExtResource("1_5o7qj")

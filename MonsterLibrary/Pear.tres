@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MonsterResource" load_steps=5 format=3 uid="uid://bwtdj033x5v15"]
+
+[ext_resource type="Script" path="res://MonsterLibrary/MonsterResource.gd" id="1_3m1q4"]
+[ext_resource type="Resource" path="res://BattleMonster/Brain/InstinctLibrary/AttackNearest.tres" id="1_3xoa6"]
+[ext_resource type="Texture2D" uid="uid://d1ec3bqmvvhd4" path="res://pera.png" id="1_7mntb"]
+[ext_resource type="Resource" uid="uid://jf5lksh754ow" path="res://ItemLibrary/FireSword.tres" id="2_x7whu"]
+
+[resource]
+script = ExtResource("1_3m1q4")
+texture = ExtResource("1_7mntb")
+instinct = ExtResource("1_3xoa6")
+name = "Pear"
+health = 100
+health_regen = 1
+stamina = 100
+stamina_regen = 5
+mana = 100
+mana_regen = 0
+attack_range = 1
+speed = 100
+damage = 20
+attack_delay = 1
+attack_stamina_cost = 20
+is_ally = true
+itens = Array[Resource("res://ItemLibrary/ItemResource.gd")]([ExtResource("2_x7whu")])

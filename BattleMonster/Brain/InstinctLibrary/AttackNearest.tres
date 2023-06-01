@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="AttackNearest" load_steps=2 format=3 uid="uid://5ahylqleh4xg"]
+
+[ext_resource type="Script" path="res://BattleMonster/Brain/InstinctLibrary/AttackNearest.gd" id="1_eajdh"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_eajdh")
